@@ -26,6 +26,23 @@ class AccountsTest(TestCase):
         response = self.client.get(reverse('account_signup'))
         self.assertContains(response, 'Signup')
 
+    def test_password_reset_load(self):
+        response = self.client.get('/accounts/password/reset/')
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('account_reset_password'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_password_reset_contain(self):
+        response = self.client.get(reverse('account_reset_password'))
+        self.assertContains(response, 'Password Reset')
+
+    def test_password_reset_POST(self):
+        response = self.client.post(reverse('account_reset_password'),
+                                    {
+                                        'email': 'test@gmail.com'
+                                    })
+        self.assertEqual(response.status_code, 302)
+
     def test_authentication_POST(self):
         # checking user is not login
         response = self.client.get(reverse('account_login'))
@@ -61,5 +78,24 @@ class AccountsTest(TestCase):
                                     {
                                             'login': 'nuser@gmail.com',
                                             'password': 'nuser1pass',
+                                    })
+        self.assertEqual(response.status_code, 302)
+
+        # password change load
+        response = self.client.get('/accounts/password/change/')
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('account_change_password'))
+        self.assertEqual(response.status_code, 200)
+
+        # password change contain
+        response = self.client.get(reverse('account_change_password'))
+        self.assertContains(response, 'Change Password')
+
+        # password change POST
+        response = self.client.post(reverse('account_change_password'),
+                                    {
+                                        'oldpassword': 'nuser1pass',
+                                        'password1': 'newpass1user',
+                                        'password2': 'newpass1user'
                                     })
         self.assertEqual(response.status_code, 302)
