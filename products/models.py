@@ -1,8 +1,7 @@
-import getpass
-
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
 
 
 class Product(models.Model):
@@ -29,11 +28,11 @@ class ActiveCommentManager(models.Manager):
 class Comment(models.Model):
 
     PRODUCT_STAR_CHOICES = (
-        ('1', 'very bad'),
-        ('2', 'bad'),
-        ('3', 'normal'),
-        ('4', 'good'),
-        ('5', 'perfect'),
+        ('1', _('very bad')),
+        ('2', _('bad')),
+        ('3', _('normal')),
+        ('4', _('good')),
+        ('5', _('perfect')),
     )
 
     author = models.ForeignKey(
@@ -44,8 +43,8 @@ class Comment(models.Model):
     )
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
 
-    body = models.TextField(verbose_name='comment text')
-    star = models.CharField(max_length=10, choices=PRODUCT_STAR_CHOICES, verbose_name='score')
+    body = models.TextField(verbose_name=_('comment text'))
+    star = models.CharField(max_length=10, choices=PRODUCT_STAR_CHOICES, verbose_name=_('score'))
 
     active = models.BooleanField(default=True)
 
