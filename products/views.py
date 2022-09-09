@@ -3,14 +3,18 @@ from django.views import generic
 from django.shortcuts import get_object_or_404
 from django.utils.translation import gettext as _
 from django.http import HttpResponse
+from django.contrib import messages
 
 from .models import Product, Comment
 from .forms import CommentFrom
 
 
-def test_translation_view(request):
+def test_translation_message_view(request):
     result = _('hello')
-    return HttpResponse(result)
+    messages.success(request, 'operation was successful ! ')
+    messages.warning(request, 'operation was prevented ! ')
+    messages.error(request, 'operation was failure ! ')
+    return render(request, 'products/messagetest.html', {'result': result})
 
 
 class ProductListView(generic.ListView):

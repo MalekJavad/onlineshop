@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+from django.contrib.messages import constants as const_messages
 from pathlib import Path
 from environs import Env
 
@@ -177,3 +178,8 @@ LOGOUT_REDIRECT_URL = 'home'
 
 # crispy form config
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# message tag change
+MESSAGE_TAGS = {
+    const_messages.ERROR: 'danger',
+}
