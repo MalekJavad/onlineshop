@@ -75,10 +75,6 @@ msgstr "ویژگی ها"
 msgid "comments"
 msgstr "دیدگاه"
 
-#: .\templates\products\product_detail.html:111
-msgid "size"
-msgstr "اندازه"
-
 #: .\views.py:13
 msgid "hello"
 msgstr "سلام داوش"
