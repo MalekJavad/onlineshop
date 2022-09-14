@@ -82,11 +82,11 @@
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-info-tab" data-toggle="tab"
                                        href="#nav-info" role="tab" aria-selected="true">
-                                        <span>ویژگی ها</span>
+                                        <span>{% trans 'features' %}</span>
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-reviews-tab"
                                        data-toggle="tab" href="#nav-reviews" role="tab" aria-selected="true">
-                                        <span>نظرات ({{ product.comments.all|only_active_comments|length }})</span>
+                                        <span>{% trans 'comments' %} ({{ product.comments.all|only_active_comments|length }})</span>
                                     </a>
                                 </div>
                                 <div class="tab-content product-data-tab__content" id="product-tabContent">
@@ -108,7 +108,7 @@
                                                     <td>۴۳۰ گرم</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>سایز</th>
+                                                    <th>{% trans 'size' %}</th>
                                                     <td>XL</td>
                                                 </tr>
                                                 <tr>

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-09 19:53+0430\n"
-"PO-Revision-Date: 2022-09-09 21:20+0430\n"
+"POT-Creation-Date: 2022-09-14 13:51+0430\n"
+"PO-Revision-Date: 2022-09-14 13:51+0430\n"
 "Last-Translator:   <javad.malek.clash2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -67,6 +67,18 @@ msgstr "دسته بندی ها"
 msgid "Product Description"
 msgstr "جزئیات محصول"
 
-#: .\views.py:12
+#: .\templates\products\product_detail.html:85
+msgid "features"
+msgstr "ویژگی ها"
+
+#: .\templates\products\product_detail.html:89
+msgid "comments"
+msgstr "دیدگاه"
+
+#: .\templates\products\product_detail.html:111
+msgid "size"
+msgstr "اندازه"
+
+#: .\views.py:13
 msgid "hello"
 msgstr "سلام داوش"
