@@ -1,3 +1,6 @@
+from django.contrib import messages
+from django.utils.translation import gettext as _
+
 from products.models import Product
 
 
@@ -16,16 +19,21 @@ class Cart:
 
         self.cart = cart
 
-    def add(self, product, quantity=1):
+    def add(self, product, quantity=1, replace_current_quantity=False):
         """
         implementing the add method for adding item into the cart
         """
         product_id = str(product.id)
 
         if product_id not in self.cart:
-            self.cart[product_id] = {'quantity': quantity}
+            self.cart[product_id] = {'quantity': 0}
+
+        if replace_current_quantity:
+            self.cart[product_id]['quantity'] = quantity
         else:
-            self.cart[product_id][quantity] += quantity
+            self.cart[product_id]['quantity'] += quantity
+
+        messages.success(self.request, _("product successfully added to your cart"))
 
         self.save()
 
@@ -37,6 +45,7 @@ class Cart:
 
         if product_id in self.cart:
             del self.cart[product_id]
+            messages.success(self.request, _("product successfully removed from your cart"))
             self.save()
 
     def save(self):
@@ -59,6 +68,7 @@ class Cart:
             cart[str(product.id)]['product_obj'] = product
 
         for item in cart.values():
+            item['total_price'] = item['product_obj'].price * item['quantity']
             yield item
 
     def __len__(self):
@@ -69,7 +79,5 @@ class Cart:
         self.save()
 
     def get_total_price(self):
-        products_ids = self.cart.keys()
-        products = Product.objects.filter(id__in=products_ids)
-
-        return sum(product.price for product in products)
+        return sum(item['quantity'] * item['product_obj'].price for item in self.cart.values())
+        # return sum(item['total_price'] for item in self.cart.values())
