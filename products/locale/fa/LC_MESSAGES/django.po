@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-14 13:56+0430\n"
-"PO-Revision-Date: 2022-09-14 13:57+0430\n"
+"POT-Creation-Date: 2022-09-16 00:16+0430\n"
+"PO-Revision-Date: 2022-09-16 00:17+0430\n"
 "Last-Translator:   <javad.malek.clash2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -55,26 +55,30 @@ msgstr "جزئیات محصول"
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:61
+#: .\templates\products\product_detail.html:64
 msgid "Add to Cart"
 msgstr "افزودن به سبد خرید"
 
-#: .\templates\products\product_detail.html:65
+#: .\templates\products\product_detail.html:71
 msgid "categories"
 msgstr "دسته بندی ها"
 
-#: .\templates\products\product_detail.html:81
+#: .\templates\products\product_detail.html:87
 msgid "Product Description"
 msgstr "جزئیات محصول"
 
-#: .\templates\products\product_detail.html:85
+#: .\templates\products\product_detail.html:91
 msgid "features"
 msgstr "ویژگی ها"
 
-#: .\templates\products\product_detail.html:89
+#: .\templates\products\product_detail.html:95
 msgid "comments"
 msgstr "دیدگاه"
 
 #: .\views.py:13
 msgid "hello"
 msgstr "سلام داوش"
+
+#: .\views.py:49
+msgid "Comment successfully created"
+msgstr "دیدگاه شما با موفقیت اضافه شد"
