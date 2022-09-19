@@ -170,14 +170,19 @@
                                                 <div class="row">
                                                     <div class="border-top py-5 w-100"></div>
                                                     <div class="col-lg-8 m-auto">
-                                                        <span class="reply-title pull-right">نظر خود را بنویسید</span>
+                                                        <span class="reply-title pull-right">{% trans 'write your comment' %}</span>
                                                         <br>
-                                                        <form action="{% url 'comment_create' product.id %}"
-                                                              method="post">
-                                                            {% csrf_token %}
-                                                            {{ comment_form|crispy }}
-                                                            <input type="submit" value="ارسال" class="btn">
-                                                        </form>
+                                                        {% if user.is_authenticated %}
+                                                            <form action="{% url 'comment_create' product.id %}"
+                                                                  method="post">
+                                                                {% csrf_token %}
+                                                                {{ comment_form|crispy }}
+                                                                <input type="submit" value="ارسال" class="btn">
+                                                            </form>
+                                                        {% else %}
+                                                            <p>{% trans 'to write your comment, please' %} <a
+                                                                    href="{% url 'account_login' %}">{% trans 'Login' %}</a></p>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             </div>

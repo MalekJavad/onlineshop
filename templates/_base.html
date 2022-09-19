@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!doctype html>
 <html lang="en">
@@ -111,15 +112,18 @@
                                 <i class="flaticon flaticon-user"></i>
                             </a>
                             <ul class="user-info-menu">
-                                <li>
-                                    <a class="text-right" href="my-account.html">حساب کاربری</a>
-                                </li>
-                                <li>
-                                    <a class="text-right" href="cart.html">سبد خرید</a>
-                                </li>
-                                <li>
-                                    <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
-                                </li>
+                                {% if user.is_authenticated %}
+                                    <li>
+                                        <a class="text-right" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a class="text-right" href="{% url 'account_login' %}">{% trans 'Login' %}</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-right" href="{% url 'account_signup' %}">{% trans 'Signup' %}</a>
+                                    </li>
+                                {% endif %}
                                 <li>
                                     <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
                                 </li>
