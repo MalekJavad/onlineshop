@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-20 17:59+0430\n"
-"PO-Revision-Date: 2022-09-20 18:02+0430\n"
+"POT-Creation-Date: 2022-09-20 21:02+0430\n"
+"PO-Revision-Date: 2022-09-20 20:52+0430\n"
 "Last-Translator:   <javad.malek.clash2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,70 +18,131 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\models.py:31
+#: .\models.py:12
+msgid "Product Image"
+msgstr "تصویر محصول"
+
+#: .\models.py:32
 msgid "very bad"
 msgstr "خیلی بد"
 
-#: .\models.py:32
+#: .\models.py:33
 msgid "bad"
 msgstr "بد"
 
-#: .\models.py:33
+#: .\models.py:34
 msgid "normal"
 msgstr "متوسط"
 
-#: .\models.py:34
+#: .\models.py:35
 msgid "good"
 msgstr "خوب"
 
-#: .\models.py:35
+#: .\models.py:36
 msgid "perfect"
 msgstr "عالی"
 
-#: .\models.py:46
+#: .\models.py:47
 msgid "comment text"
 msgstr "متن دیدگاه"
 
-#: .\models.py:47
+#: .\models.py:48
 msgid "score"
 msgstr "امتیاز شما"
 
-#: .\templates\products\product_detail.html:38
+#: .\templates\products\product_detail.html:9
+msgid "product detail of"
+msgstr "جزئیات محصول"
+
 #: .\templates\products\product_detail.html:40
+#: .\templates\products\product_detail.html:42
+#: .\templates\products\product_list.html:61
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:54
+#: .\templates\products\product_detail.html:56
 msgid "Add to Cart"
 msgstr "افزودن به سبد خرید"
 
-#: .\templates\products\product_detail.html:61
+#: .\templates\products\product_detail.html:63
 msgid "categories"
 msgstr "دسته بندی ها"
 
-#: .\templates\products\product_detail.html:77
+#: .\templates\products\product_detail.html:64
+msgid "clothe"
+msgstr "لباس"
+
+#: .\templates\products\product_detail.html:65
+msgid "summer type"
+msgstr "تابستانی"
+
+#: .\templates\products\product_detail.html:66
+msgid "warm"
+msgstr "گرم"
+
+#: .\templates\products\product_detail.html:67
+msgid "woman"
+msgstr "زنانه"
+
+#: .\templates\products\product_detail.html:79
 msgid "Product Description"
 msgstr "جزئیات محصول"
 
-#: .\templates\products\product_detail.html:81
+#: .\templates\products\product_detail.html:83
 msgid "features"
 msgstr "ویژگی ها"
 
-#: .\templates\products\product_detail.html:85
+#: .\templates\products\product_detail.html:87
 msgid "comments"
 msgstr "دیدگاه"
 
-#: .\templates\products\product_detail.html:163
+#: .\templates\products\product_detail.html:105
+msgid "mass"
+msgstr "وزن"
+
+#: .\templates\products\product_detail.html:106
+msgid "gram"
+msgstr "گرم"
+
+#: .\templates\products\product_detail.html:109
+msgid "size"
+msgstr "اندازه"
+
+#: .\templates\products\product_detail.html:113
+msgid "color"
+msgstr "رنگ"
+
+#: .\templates\products\product_detail.html:129
+msgid "comment for"
+msgstr "دیدگاه برای"
+
+#: .\templates\products\product_detail.html:165
 msgid "write your comment"
 msgstr "دیدگاه خود را بنویسید"
 
-#: .\templates\products\product_detail.html:173
+#: .\templates\products\product_detail.html:172
+msgid "send"
+msgstr "ارسال"
+
+#: .\templates\products\product_detail.html:175
 msgid "to write your comment, please"
 msgstr "برای نوشتن دیدگاه خود، لطفا وارد حساب کاربری شوید"
 
-#: .\templates\products\product_detail.html:174
+#: .\templates\products\product_detail.html:176
 msgid "Login"
 msgstr "ورود به حساب کاربری"
+
+#: .\templates\products\product_list.html:6
+msgid "product page"
+msgstr "صفحه محصولات"
+
+#: .\templates\products\product_list.html:22
+msgid "show"
+msgstr "نمایش"
+
+#: .\templates\products\product_list.html:64
+msgid "Add to cart"
+msgstr "افزودن به سبد خرید"
 
 #: .\views.py:13
 msgid "hello"

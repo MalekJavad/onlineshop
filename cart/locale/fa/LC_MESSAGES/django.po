@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-20 17:58+0430\n"
+"POT-Creation-Date: 2022-09-20 20:53+0430\n"
 "PO-Revision-Date: 2022-09-20 18:02+0430\n"
 "Last-Translator:   <javad.malek.clash2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,8 @@ msgstr "محصول با موفقیت به سبد خرید شما اضافه شد
 msgid "product successfully removed from your cart"
 msgstr "محصول با موفقیت از سبد خرید شما حذف شد"
 
-#: .\templates\cart\cart_detail.html:14 .\templates\cart\cart_sidebar.html:7
+#: .\templates\cart\cart_detail.html:9 .\templates\cart\cart_detail.html:14
+#: .\templates\cart\cart_sidebar.html:7
 msgid "Cart"
 msgstr "سبد خرید"
 

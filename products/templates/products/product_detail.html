@@ -6,7 +6,7 @@
 {% load comment_tags %}
 
 {% block page_title %}
-    جزئیات محصول: {{ product.title }}
+    {% trans 'product detail of' %} {{ product.title }}
 {% endblock page_title %}
 
 {% block content %}
@@ -61,10 +61,10 @@
                                 </div>
                                 <div class="product-footer-meta mt-5 pt-5">
                                     <p><span class="m-0">{% trans 'categories' %}:</span>
-                                        <a href="shop.html">لباس</a>,
-                                        <a href="shop.html">تابستانی</a>,
-                                        <a href="shop.html">گرم</a>,
-                                        <a href="shop.html">زنانه</a>
+                                        <a href="shop.html">{% trans 'clothe' %}</a>,
+                                        <a href="shop.html">{% trans 'summer type' %}</a>,
+                                        <a href="shop.html">{% trans 'warm' %}</a>,
+                                        <a href="shop.html">{% trans 'woman' %}</a>
                                     </p>
                                 </div>
                             </div>
@@ -102,15 +102,15 @@
                                             <table class="table shop_attributes">
                                                 <tbody>
                                                 <tr>
-                                                    <th>وزن</th>
-                                                    <td>۴۳۰ گرم</td>
+                                                    <th>{% trans 'mass' %}</th>
+                                                    <td>۴۳۰ {% trans 'gram' %}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>سایز</th>
+                                                    <th>{% trans 'size' %}</th>
                                                     <td>XL</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>رنگ</th>
+                                                    <th>{% trans 'color' %}</th>
                                                     <td>
                                                         <a href="shop-sidebar.html">مشکی</a>,
                                                         <a href="shop-sidebar.html">سبز</a>,
@@ -126,7 +126,7 @@
                                          aria-labelledby="nav-reviews-tab">
                                         <div class="product-reviews">
                                             <h3 class="review__title">{{ product.comments.all|only_active_comments|length }}
-                                                نظر برای {{ product.title }}</h3>
+                                                {% trans 'comment for' %} {{ product.title }}</h3>
                                             <ul class="review__list">
                                                 {% for comment in product.comments.all|only_active_comments %}
                                                     <li class="review__item">
@@ -169,7 +169,7 @@
                                                                   method="post">
                                                                 {% csrf_token %}
                                                                 {{ comment_form|crispy }}
-                                                                <input type="submit" value="ارسال" class="btn">
+                                                                <input type="submit" value="{% trans 'send' %}" class="btn">
                                                             </form>
                                                         {% else %}
                                                             <p>{% trans 'to write your comment, please' %} <a
