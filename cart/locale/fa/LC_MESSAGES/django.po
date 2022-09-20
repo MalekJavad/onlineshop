@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-16 00:10+0430\n"
-"PO-Revision-Date: 2022-09-16 00:14+0430\n"
+"POT-Creation-Date: 2022-09-20 17:58+0430\n"
+"PO-Revision-Date: 2022-09-20 18:02+0430\n"
 "Last-Translator:   <javad.malek.clash2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,50 +26,63 @@ msgstr "محصول با موفقیت به سبد خرید شما اضافه شد
 msgid "product successfully removed from your cart"
 msgstr "محصول با موفقیت از سبد خرید شما حذف شد"
 
-#: .\templates\cart\cart_detail.html:27
+#: .\templates\cart\cart_detail.html:14 .\templates\cart\cart_sidebar.html:7
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: .\templates\cart\cart_detail.html:32
 msgid "product picture"
 msgstr "تصویر محصول"
 
-#: .\templates\cart\cart_detail.html:28
+#: .\templates\cart\cart_detail.html:33
 msgid "product name"
 msgstr "نام محصول"
 
-#: .\templates\cart\cart_detail.html:29
+#: .\templates\cart\cart_detail.html:34
 msgid "price"
 msgstr "قیمت"
 
-#: .\templates\cart\cart_detail.html:30
+#: .\templates\cart\cart_detail.html:35
 msgid "amount"
 msgstr "تعداد"
 
-#: .\templates\cart\cart_detail.html:31
+#: .\templates\cart\cart_detail.html:36
 msgid "total price"
 msgstr "قیمت کل"
 
-#: .\templates\cart\cart_detail.html:85
+#: .\templates\cart\cart_detail.html:90
 msgid "your Cart is Empty! please add some products! "
 msgstr "سبد خرید شما خالی است! لطفا تعدادی کالا اضافه کنید"
 
-#: .\templates\cart\cart_detail.html:86
+#: .\templates\cart\cart_detail.html:91
 msgid "Go Shopping"
 msgstr "برو به فروشگاه"
 
-#: .\templates\cart\cart_detail.html:92
+#: .\templates\cart\cart_detail.html:97
 msgid "clear cart"
 msgstr "خالی کردن سبد خرید"
 
-#: .\templates\cart\cart_detail.html:99
+#: .\templates\cart\cart_detail.html:104
 msgid "total"
 msgstr "مجموع"
 
-#: .\templates\cart\cart_detail.html:111
+#: .\templates\cart\cart_detail.html:116 .\templates\cart\cart_sidebar.html:32
 msgid "full total price"
 msgstr "مجموع کل"
 
-#: .\templates\cart\cart_detail.html:115
+#: .\templates\cart\cart_detail.html:120 .\templates\cart\cart_sidebar.html:25
+#: .\templates\cart\cart_sidebar.html:33
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\cart\cart_detail.html:122
+#: .\templates\cart\cart_detail.html:127
 msgid "confirm order"
 msgstr "ثبت سفارش"
+
+#: .\templates\cart\cart_sidebar.html:36
+msgid "go to cart"
+msgstr "برو به سبد خرید"
+
+#: .\templates\cart\cart_sidebar.html:37
+msgid "checkout"
+msgstr "پرداخت"

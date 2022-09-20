@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-19 23:27+0430\n"
-"PO-Revision-Date: 2022-09-19 23:27+0430\n"
+"POT-Creation-Date: 2022-09-20 17:59+0430\n"
+"PO-Revision-Date: 2022-09-20 18:02+0430\n"
 "Last-Translator:   <javad.malek.clash2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -46,44 +46,40 @@ msgstr "متن دیدگاه"
 msgid "score"
 msgstr "امتیاز شما"
 
-#: .\templates\products\product_detail.html:23
-msgid "Product Description of"
-msgstr "جزئیات محصول"
-
-#: .\templates\products\product_detail.html:48
-#: .\templates\products\product_detail.html:50
+#: .\templates\products\product_detail.html:38
+#: .\templates\products\product_detail.html:40
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:64
+#: .\templates\products\product_detail.html:54
 msgid "Add to Cart"
 msgstr "افزودن به سبد خرید"
 
-#: .\templates\products\product_detail.html:71
+#: .\templates\products\product_detail.html:61
 msgid "categories"
 msgstr "دسته بندی ها"
 
-#: .\templates\products\product_detail.html:87
+#: .\templates\products\product_detail.html:77
 msgid "Product Description"
 msgstr "جزئیات محصول"
 
-#: .\templates\products\product_detail.html:91
+#: .\templates\products\product_detail.html:81
 msgid "features"
 msgstr "ویژگی ها"
 
-#: .\templates\products\product_detail.html:95
+#: .\templates\products\product_detail.html:85
 msgid "comments"
 msgstr "دیدگاه"
 
-#: .\templates\products\product_detail.html:173
+#: .\templates\products\product_detail.html:163
 msgid "write your comment"
 msgstr "دیدگاه خود را بنویسید"
 
-#: .\templates\products\product_detail.html:183
+#: .\templates\products\product_detail.html:173
 msgid "to write your comment, please"
 msgstr "برای نوشتن دیدگاه خود، لطفا وارد حساب کاربری شوید"
 
-#: .\templates\products\product_detail.html:184
+#: .\templates\products\product_detail.html:174
 msgid "Login"
 msgstr "ورود به حساب کاربری"
 
