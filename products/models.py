@@ -8,7 +8,7 @@ from django.utils import timezone
 class Product(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    price = models.PositiveSmallIntegerField(default=0)
+    price = models.PositiveIntegerField(default=0)
     active = models.BooleanField(default=True)
     image = models.ImageField(upload_to='products/product_cover/', verbose_name=_('Product Image'), blank=True)
 
