@@ -45,15 +45,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django.contrib.humanize',
+
     'rosetta',
     'crispy_forms',
     'allauth',
     'allauth.account',
+    'jalali_date',
 
     'accounts',
     'pages',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
+    'persian_translate.apps.PersianTranslateConfig',
 ]
 
 # all auth configs
