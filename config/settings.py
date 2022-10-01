@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'jalali_date',
+    'ckeditor',
 
     'accounts',
     'pages',
@@ -171,6 +172,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Media
 MEDIA_URL = '/media/'

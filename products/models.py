@@ -4,12 +4,15 @@ from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 
+from ckeditor.fields import RichTextField
+
 
 class Product(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    price = models.PositiveIntegerField(default=0)
-    active = models.BooleanField(default=True)
+    title = models.CharField(max_length=100, verbose_name=_('Product Title'))
+    description = RichTextField(verbose_name=_('Product Description'))
+    short_description = models.TextField(blank=True, verbose_name=_('Product Short Description'))
+    price = models.PositiveIntegerField(default=0, verbose_name=_('Product Price'))
+    active = models.BooleanField(default=True, verbose_name=_('Product Active Status'))
     image = models.ImageField(upload_to='products/product_cover/', verbose_name=_('Product Image'), blank=True)
 
     datetime_created = models.DateTimeField(default=timezone.now, verbose_name=_('Date Time of Creation'))
@@ -41,14 +44,19 @@ class Comment(models.Model):
         get_user_model(),
         on_delete=models.CASCADE,
         related_name='comments',
-        verbose_name='comment author'
+        verbose_name=_('Comment Author')
     )
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name='comments',
+        verbose_name=_('Product of Comment')
+    )
 
     body = models.TextField(verbose_name=_('comment text'))
     star = models.CharField(max_length=10, choices=PRODUCT_STAR_CHOICES, verbose_name=_('score'))
 
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(default=True, verbose_name=_('Comment Active Status'))
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
