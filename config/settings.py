@@ -53,12 +53,14 @@ INSTALLED_APPS = [
     'allauth.account',
     'jalali_date',
     'ckeditor',
+    'phonenumber_field',
 
     'accounts',
     'pages',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
     'persian_translate.apps.PersianTranslateConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 # all auth configs
